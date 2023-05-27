@@ -9,7 +9,7 @@ Steps to be followed:
 
 1. Clone the repository
 2. Navigate to the project directory
-3.Install the required dependencies
+3. Install the required dependencies (python,flask,Opencv)
 4. Run the Flask application
 5. Open your web browser and go to `http://localhost:5000` to access the application.
 
