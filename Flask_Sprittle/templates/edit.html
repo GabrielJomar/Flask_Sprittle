@@ -1,0 +1,23 @@
+
+
+
+<!-- edit.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Video</title>
+</head>
+<body>
+    <h1>Edit Video</h1>
+    <form action="/edit/{{ video.id }}" method="POST">
+        <label for="name">Video Name:</label>
+        <input type="text" id="name" name="name" value="{{ video.name }}" required><br><br>
+        <label for="path">Video Path:</label>
+        <input type="text" id="path" name="path" value="{{ video.path }}" required><br><br>
+        <input type="submit" value="Save">
+    </form>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>

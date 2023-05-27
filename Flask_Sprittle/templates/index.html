@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+
+
+    
+    <!-- list -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Streaming App</title>
+    <script>
+        function showVideoList() {
+            var videoList = document.getElementById('video-list');
+            videoList.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Video Streaming App</h1>
+    <button onclick="showVideoList()">Show Video List</button>
+    <div id="video-list" style="display: none;">
+        <h2>Video List</h2>
+        <ul>
+            {% for video in videos %}
+            <li><a href="{{ url_for('stream_video', id=video.id) }}">{{ video.name }}</a></li>
+
+           
+            <a href="/edit/{{ video.id }}">Edit Path</a>
+            <button onclick="deleteVideo({{ video.id }})">Delete</button><br><br>
+            {% endfor %}
+            
+        </ul>
+    </div>
+    <script>
+        function deleteVideo(videoId) {
+            if (confirm('Are you sure you want to delete this video?')) {
+                fetch(`/api/videos/${videoId}`, {
+                    method: 'DELETE'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    // Reload the page after deleting the video
+                    location.reload();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while deleting the video');
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <!-- upload -->
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Video Upload</title>
+    </head>
+    <body>
+        <h1>Video Upload</h1>
+        <form action="/api/videos" method="POST" enctype="multipart/form-data">
+            <label for="name">Video Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="video">Choose a video:</label>
+            <input type="file" id="video" name="video" accept="video/mp4" required><br><br>
+            <input type="submit" value="Upload">
+        </form>
+    </body>
+    </html>
+
+
+
+    <!-- search -->
+    <form action="/search" method="GET">
+      <input type="text" name="query" placeholder="Search videos">
+      <input type="submit" value="Search">
+    </form>
+
+
+</body>
+</html>

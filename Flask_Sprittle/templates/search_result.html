@@ -1,0 +1,18 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+
+    </form>
+    <ul>
+        {% for video in videos %}
+            <li><a href="{{ url_for('stream_video', id=video['id']) }}">{{ video['name'] }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
