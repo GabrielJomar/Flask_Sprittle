@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List Data</title>
+</head>
+<body>
+    <h1>List Data</h1>
+    <ul>
+        {% for item in OEE %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <title>Filter settings</title>
+    <h1>Data Filter Settings</h1>
+    <form action="/settings" method="post">
+        <label for="camera_name">Camera Name:</label>
+        <input type="text" id="camera_name" name="camera_name" required><br><br>
+
+        <label for="oee_threshold">OEE Threshold:</label>
+        <input type="number" id="oee_threshold" name="oee_threshold" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
