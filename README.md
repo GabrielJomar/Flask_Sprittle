@@ -9,9 +9,11 @@ Steps to be followed:
 
 1. Clone the repository
 2. Navigate to the project directory
-3. Install the required dependencies (python,flask,Opencv)
-4. Run the Flask application
-5. Open your web browser and go to `http://localhost:5000` to access the application.
+3. Install the required dependencies (python,flask,Opencv,Mysql,Mysql.connector)
+4. Create a folder named 'templates' int the same directory as the flask application and store all html files in it. 
+5. Make sure mysql is connected and database and table are created in the name 'video' and 'signup'.
+6. Run the Flask application
+7. Open your web browser and go to `http://localhost:5000` to access the application.
 
 ## Usage
 
@@ -40,13 +42,16 @@ Steps to be followed:
 1. Clone the repository
 2. Navigate to the project directory
 3. Install the required dependencies (python,flask,Sqlite)
-4. Run the Flask application
-5. Open your web browser and go to `http://localhost:5000` to access the application.
+4.  Create a folder named 'templates' int the same directory as the flask application and store all html files in it. 
+5. Make sure mysql is connected and database and table are created in the name 'oeelogin' and 'signup'.
+5. Run the Flask application
+6. Open your web browser and go to `http://localhost:5000` to access the application.
 
 
 ## Usage
-Retrieve details of all machines
-Retrieve OEE data for all machines
-Filter OEE data based on Camera Name, date range, and OEE threshold
+
+- Retrieve details of all machines
+- Retrieve OEE data for all machines
+- Filter OEE data based on Camera Name, date range, and OEE threshold
 
 
