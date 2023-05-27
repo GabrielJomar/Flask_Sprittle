@@ -33,6 +33,20 @@ Steps to be followed:
 
 
 
+# Flask_Sql
 
+Steps to be followed:
+
+1. Clone the repository
+2. Navigate to the project directory
+3. Install the required dependencies (python,flask,Sqlite)
+4. Run the Flask application
+5. Open your web browser and go to `http://localhost:5000` to access the application.
+
+
+## Usage
+Retrieve details of all machines
+Retrieve OEE data for all machines
+Filter OEE data based on Camera Name, date range, and OEE threshold
 
 
